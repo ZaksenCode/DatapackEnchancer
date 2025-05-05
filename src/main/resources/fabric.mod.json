@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
-  "id": "datapackenchancer",
+  "id": "dp_enchancer",
   "version": "${version}",
   "name": "DatapackEnchancer",
   "description": "",
   "authors": [],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/datapackenchancer/icon.png",
-  "environment": "server",
+  "icon": "assets/enchancer/icon.png",
+  "environment": "*",
   "entrypoints": {
     "main": [
-      "me.zaksen.datapackenchancer.Datapackenchancer"
+      "me.zaksen.enchancer.Enchancer"
     ]
   },
   "mixins": [
-    "datapackenchancer.mixins.json"
+    "enchancer.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

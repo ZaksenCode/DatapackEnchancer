@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static me.zaksen.enchancer.Constants.MOD_ID;
+import static me.zaksen.enchancer.Enchancer.MOD_ID;
 
 @Mixin(CommandFunctionManager.class)
 public class CommandFunctionManagerMixin {

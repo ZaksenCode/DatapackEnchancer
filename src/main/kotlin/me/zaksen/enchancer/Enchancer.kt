@@ -18,9 +18,7 @@ class Enchancer : ModInitializer {
         fun getFunctionHolder(): FunctionHolder {
             return functionHolder
         }
-    }
-}
 
-object Constants {
-    const val MOD_ID: String = "enchancer"
+        const val MOD_ID: String = "enchancer"
+    }
 }
