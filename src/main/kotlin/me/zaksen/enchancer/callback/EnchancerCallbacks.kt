@@ -1,6 +1,7 @@
 package me.zaksen.enchancer.callback
 
 import me.zaksen.enchancer.Enchancer
+import me.zaksen.enchancer.util.FunctionHelper
 import net.fabricmc.fabric.api.event.player.UseItemCallback
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.server.network.ServerPlayerEntity
@@ -25,11 +26,12 @@ class EnchancerCallbacks {
             }
 
             val args = NbtCompound()
+            args.putString("player", player.nameForScoreboard)
             args.put("item", handStack.toNbt(player.registryManager))
             args.putInt("hand", hand.ordinal)
 
             Enchancer.getFunctionHolder().itemUseFunctions.forEach {
-                it.withMacroReplaced(args, player.server!!.commandManager.dispatcher)
+                FunctionHelper.callFunction(it, args, player.server)
             }
 
             return@register ActionResult.PASS
