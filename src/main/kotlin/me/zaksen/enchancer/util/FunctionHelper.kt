@@ -1,6 +1,5 @@
 package me.zaksen.enchancer.util
 
-import com.mojang.brigadier.CommandDispatcher
 import com.mojang.logging.LogUtils
 import net.minecraft.command.CommandExecutionContext
 import net.minecraft.command.ReturnValueConsumer

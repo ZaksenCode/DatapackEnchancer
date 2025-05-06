@@ -17,6 +17,10 @@ import static me.zaksen.enchancer.Enchancer.MOD_ID;
 public class CommandFunctionManagerMixin {
 
     @Unique private static final Identifier ITEM_USE_TAG_ID = Identifier.of(MOD_ID, "item_use");
+
+    @Unique private static final Identifier ENTITY_USE_TAG_ID = Identifier.of(MOD_ID, "entity_use");
+    @Unique private static final Identifier ENTITY_ATTACKED_TAG_ID = Identifier.of(MOD_ID, "entity_attacked");
+
     @Unique private static final Identifier ENTITY_DEATH_TAG_ID = Identifier.of(MOD_ID, "entity_death");
     @Unique private static final Identifier ENTITY_SPAWN_TAG_ID = Identifier.of(MOD_ID, "entity_death");
     @Unique private static final Identifier ENTITY_DAMAGED_TAG_ID = Identifier.of(MOD_ID, "entity_death");
@@ -27,6 +31,9 @@ public class CommandFunctionManagerMixin {
         holder.clearFunctions();
 
         holder.getItemUseFunctions().addAll(loader.getTagOrEmpty(ITEM_USE_TAG_ID));
+
+        holder.getEntityUseFunctions().addAll(loader.getTagOrEmpty(ENTITY_USE_TAG_ID));
+        holder.getEntityAttackedFunctions().addAll(loader.getTagOrEmpty(ENTITY_ATTACKED_TAG_ID));
 
         holder.getEntityDeathFunctions().addAll(loader.getTagOrEmpty(ENTITY_DEATH_TAG_ID));
         holder.getEntitySpawnFunctions().addAll(loader.getTagOrEmpty(ENTITY_SPAWN_TAG_ID));
