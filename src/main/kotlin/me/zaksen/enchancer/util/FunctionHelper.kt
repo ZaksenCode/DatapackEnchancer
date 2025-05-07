@@ -30,7 +30,6 @@ object FunctionHelper {
                 source,
                 ReturnValueConsumer.EMPTY
             )}
-        } catch (_: MacroException) {
         } catch (e: Exception) {
             LOGGER.warn("Failed to execute function {}", function.id(), e)
         } finally {
