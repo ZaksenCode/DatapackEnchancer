@@ -4,7 +4,9 @@
   "package": "me.zaksen.enchancer.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "CommandFunctionManagerMixin"
+    "CommandFunctionManagerMixin",
+    "EntityMixin",
+    "MobEntityMixin"
   ],
   "client": [
   ],

@@ -23,7 +23,6 @@ public class CommandFunctionManagerMixin {
 
     @Unique private static final Identifier ENTITY_DEATH_TAG_ID = Identifier.of(MOD_ID, "entity_death");
     @Unique private static final Identifier ENTITY_SPAWN_TAG_ID = Identifier.of(MOD_ID, "entity_death");
-    @Unique private static final Identifier ENTITY_DAMAGED_TAG_ID = Identifier.of(MOD_ID, "entity_death");
 
     @Inject(method = "load", at = @At("TAIL"))
     private void whenLoad(FunctionLoader loader, CallbackInfo ci) {
@@ -37,6 +36,5 @@ public class CommandFunctionManagerMixin {
 
         holder.getEntityDeathFunctions().addAll(loader.getTagOrEmpty(ENTITY_DEATH_TAG_ID));
         holder.getEntitySpawnFunctions().addAll(loader.getTagOrEmpty(ENTITY_SPAWN_TAG_ID));
-        holder.getEntityDamagedFunctions().addAll(loader.getTagOrEmpty(ENTITY_DAMAGED_TAG_ID));
     }
 }

@@ -11,7 +11,6 @@ class FunctionHolder {
 
     val entityDeathFunctions = mutableListOf<CommandFunction<ServerCommandSource>>()
     val entitySpawnFunctions = mutableListOf<CommandFunction<ServerCommandSource>>()
-    val entityDamagedFunctions = mutableListOf<CommandFunction<ServerCommandSource>>()
 
     fun clearFunctions() {
         itemUseFunctions.clear()
@@ -21,6 +20,5 @@ class FunctionHolder {
 
         entityDeathFunctions.clear()
         entitySpawnFunctions.clear()
-        entityDamagedFunctions.clear()
     }
 }
